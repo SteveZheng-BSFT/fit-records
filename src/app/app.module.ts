@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WaterModule } from './water/water.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WaterModule } from './water/water.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    WaterModule
+    WaterModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
