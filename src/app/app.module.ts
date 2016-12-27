@@ -4,17 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { WaterDrinkComponent } from './water-drink/water-drink.component';
+import { AppRoutingModule } from './app-routing.module';
+import { WaterModule } from './water/water.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WaterDrinkComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    WaterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
