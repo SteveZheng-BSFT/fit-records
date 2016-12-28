@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { RecordsModule } from './records/records.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    DashboardModule
+    DashboardModule,
+    RecordsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
