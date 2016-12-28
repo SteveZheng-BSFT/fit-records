@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { WaterModule } from './water/water.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { DashboardModule } from './dashboard/dashboard.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    WaterModule,
     DashboardModule
   ],
   providers: [],

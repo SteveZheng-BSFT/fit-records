@@ -6,3 +6,4 @@ export * from './food';
 export * from './sleep';
 export * from './steps';
 export * from './weight';
+export * from './water';

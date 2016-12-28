@@ -11,6 +11,7 @@ import { BadgeComponent } from './badge/badge.component';
 import { CaloriesComponent } from './calories/calories.component';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { FormsModule } from '@angular/forms';
+import { WaterComponent } from './water/water.component';
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
       StepsComponent,
       FoodComponent,
       BadgeComponent,
-      CaloriesComponent
+      CaloriesComponent,
+      WaterComponent
     ],
     providers: [],
 })
