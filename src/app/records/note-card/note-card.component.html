@@ -1,3 +1,7 @@
-<p>
-  note-card works!
-</p>
+<div class="note-card" [ngStyle]="{background: note.color}">
+  <div class="icon">
+    <i class="fa fa-check-circle" aria-hidden="true"></i>
+  </div>
+  <div class="title">{{note.title}}</div>
+  <div>{{note.value}}</div>
+</div>

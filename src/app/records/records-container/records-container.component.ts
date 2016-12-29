@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./records-container.component.scss']
 })
 export class RecordsContainerComponent implements OnInit {
+  note: Object = {title: 'g', value: 'ggg', color: 'lightblue'};
 
   constructor() { }
 
