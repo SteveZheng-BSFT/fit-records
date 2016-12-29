@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+.app-border {
+  margin: 5px 0 5px 0;
+  border: solid 1px darkgray;
+  border-radius: 5px;
+}
+
+.app-border:hover {
+  -webkit-box-shadow:  0 0 10px rgba(0,0,0,.5);
+  -moz-box-shadow:  0 0 10px rgba(0,0,0,.5);
+  box-shadow:  0 0 10px rgba(0,0,0,.5);
+}
+
+.app-img {
+  display: block;
+  margin: auto;
+  width :20%
+}
+
+.app-show-info {
+  text-align: center;
+}
+
+// flip card part start---------------
+.rotate-container {
+  perspective: 1000px;
+  position: relative;
+}
+
+.flipper {
+  transition: 1s all linear;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+}
+
+.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.rotate-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+// flip card part end------------------------
