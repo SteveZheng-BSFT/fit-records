@@ -2,7 +2,7 @@
 .app-border {
   margin: 5px 0 5px 0;
   border: solid 1px darkgray;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .app-border:hover {
@@ -15,10 +15,6 @@
   display: block;
   margin: auto;
   width :20%
-}
-
-.app-show-info {
-  text-align: center;
 }
 
 // flip card part start---------------
@@ -50,6 +46,10 @@
 
 .main-bgcolor {
   background-color: #2F3F43;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
