@@ -7,10 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NoteCardComponent implements OnInit {
   @Input() note: any;
+  showCheck: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.showCheck = false;
+  }
+
+  toggleCheck() {
+    this.showCheck = !this.showCheck;
   }
 
 }

@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<header>
+  <nav>
+    <button type="button" class="btn btn-link" [routerLink]="['dashboard']">Dashboard</button>
+    <button type="button" class="btn btn-link" [routerLink]="['records']">Records</button>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  copyright @2017
+</footer>

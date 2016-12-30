@@ -1,7 +1,6 @@
-<div class="note-card" [ngStyle]="{background: note.color}">
-  <div class="icon">
-    <i class="fa fa-check-circle" aria-hidden="true"></i>
-  </div>
+<div (mouseenter)="toggleCheck()" (mouseleave)="toggleCheck()" class="note-card" [ngStyle]="{background: note.color}">
+  <i *ngIf="showCheck" class="fa fa-check-circle check-icon" aria-hidden="true"></i>
+
   <div class="title">{{note.title}}</div>
   <div>{{note.value}}</div>
 </div>
