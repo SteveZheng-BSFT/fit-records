@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./records-container.component.scss']
 })
 export class RecordsContainerComponent implements OnInit {
-  note: Object = {title: 'g', value: 'ggg', color: 'lightblue'};
+  notes: Object[] = [
+    {title: 'g', value: 'ggg', color: 'lightblue'},
+    {title: 'h', value: 'hhh', color: 'pink'},
+    {title: 'k', value: 'kkk', color: 'green'}
+  ];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onNoteChecked(index: number) {
+    this.notes.splice(index, 1);
+  }
 }

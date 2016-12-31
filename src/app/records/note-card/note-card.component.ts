@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-note-card',
@@ -8,8 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NoteCardComponent implements OnInit {
   @Input() note: any;
   showCheck: boolean;
+  @Output() checked: EventEmitter<string>;
 
-  constructor() { }
+  constructor() {
+    this.checked = new EventEmitter();
+  }
 
   ngOnInit() {
     this.showCheck = false;
@@ -19,4 +22,7 @@ export class NoteCardComponent implements OnInit {
     this.showCheck = !this.showCheck;
   }
 
+  onChecked() {
+    this.checked.next(this.note);
+  }
 }
