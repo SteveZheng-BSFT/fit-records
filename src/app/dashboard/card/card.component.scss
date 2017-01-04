@@ -1,0 +1,40 @@
+.app-border {
+  margin: 5px 0 5px 0;
+  border: solid 1px darkgray;
+  border-radius: 3px;
+}
+
+.app-border:hover {
+  -webkit-box-shadow:  0 0 10px rgba(0,0,0,.5);
+  -moz-box-shadow:  0 0 10px rgba(0,0,0,.5);
+  box-shadow:  0 0 10px rgba(0,0,0,.5);
+}
+
+.rotate-container {
+  perspective: 1000px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.flipper {
+  transition: 1s all linear;
+  transform-style: preserve-3d;
+}
+
+.toolbox {
+  background-color: #556375;
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 0;
+  position: absolute;
+  bottom: -20px;
+  border-radius: 3px;
+  div {
+    cursor: pointer;
+  }
+}
+
+.pink {
+  background-color: #FD78A8;
+}
+

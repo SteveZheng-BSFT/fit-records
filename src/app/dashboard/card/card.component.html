@@ -1,0 +1,20 @@
+<div class="app-border rotate-container text-center" (mouseenter)="triggerToolBox()" (mouseleave)="triggerToolBox()">
+  <div class="flipper">
+    <ng-content></ng-content>
+  </div>
+
+  <!--tools under each card-->
+  <div class="row toolbox text-center" *ngIf="showTools">
+    <div class="col-md-2 col-sm-2 col-xs-2" (click)="flip()">
+      <i class="fa fa-cog" aria-hidden="true"></i>
+    </div>
+    <div class="col-md col-sm col-xs pink">
+      <i class="fa fa-search-plus" aria-hidden="true"></i> Quick View
+    </div>
+    <div class="col-md-5 col-sm-5 col-xs-5">
+      See More &gt;
+    </div>
+  </div>
+</div>
+
+

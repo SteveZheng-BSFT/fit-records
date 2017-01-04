@@ -12,7 +12,7 @@ import { CaloriesComponent } from './calories/calories.component';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { FormsModule } from '@angular/forms';
 import { WaterComponent } from './water/water.component';
-import { BoxToolsComponent } from './box-tools/box-tools.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
     imports: [
@@ -31,7 +31,7 @@ import { BoxToolsComponent } from './box-tools/box-tools.component';
       BadgeComponent,
       CaloriesComponent,
       WaterComponent,
-      BoxToolsComponent
+      CardComponent
     ],
     providers: [],
 })
