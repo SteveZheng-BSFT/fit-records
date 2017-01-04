@@ -17,11 +17,13 @@ export class GhostInputDirective {
     renderer.setElementClass(el.nativeElement, 'ghost-input', true);
   }
 
-  @HostListener('blur') onBlur() {
+  @HostListener('blur') @HostListener('ngModelChange') stickTop() {
     // when not focus, if there are text there, then force title stick on top
     if (this.el.nativeElement.value !== '') {
       this.renderer.setElementClass(this.el.nativeElement, 'stay-top', true);
     } else {
+      // when focus, or [when click submit and clean form, should listen ngmodelchange,
+      // because DOM doesn't know modal changes], put placeholder down
       this.renderer.setElementClass(this.el.nativeElement, 'stay-top', false);
     }
   }
