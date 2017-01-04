@@ -17,7 +17,7 @@ export class RecordsContainerComponent implements OnInit {
   ngOnInit() {
   }
 
-  onNoteChecked(index: number) {
+  onNoteChecked(index: number): void {
     this.notes.splice(index, 1);
   }
 }

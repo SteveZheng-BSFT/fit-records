@@ -20,7 +20,7 @@ export class CardComponent implements OnInit {
   }
 
   // click to flip card, true for front, false for back
-  flip() {
+  flip(): void {
     if (this.flipped) {
       this.el.nativeElement.children[0].children[0].style.transform = 'rotateY(0)';
     } else {

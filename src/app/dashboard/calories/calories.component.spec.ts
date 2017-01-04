@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CaloriesComponent } from './calories.component';
+import { CardComponent } from '../card/card.component';
+import { PDialogStubComponent } from '../../../testing/third-party-stubs';
+import { RouterLinkStubDirective } from '../../../testing/router-stubs';
 
 describe('CaloriesComponent', () => {
   let component: CaloriesComponent;
@@ -11,7 +14,12 @@ describe('CaloriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CaloriesComponent ]
+      declarations: [
+        CaloriesComponent,
+        CardComponent,
+        PDialogStubComponent,
+        RouterLinkStubDirective
+      ]
     })
     .compileComponents();
   }));

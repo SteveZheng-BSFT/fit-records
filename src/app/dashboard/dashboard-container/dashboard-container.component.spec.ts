@@ -12,7 +12,9 @@ import { WaterComponent } from '../water/water.component';
 import { SleepComponent } from '../sleep/sleep.component';
 import { StepsComponent } from '../steps/steps.component';
 import { WeightComponent } from '../weight/weight.component';
-import { PCalendarStubComponent } from '../../../testing/third-party-stubs';
+import { PCalendarStubComponent, PDialogStubComponent } from '../../../testing/third-party-stubs';
+import { CardComponent } from '../card/card.component';
+import { RouterLinkStubDirective } from '../../../testing/router-stubs';
 
 describe('DashboardContainerComponent', () => {
   let component: DashboardContainerComponent;
@@ -30,7 +32,10 @@ describe('DashboardContainerComponent', () => {
         SleepComponent,
         StepsComponent,
         WeightComponent,
-        PCalendarStubComponent
+        PCalendarStubComponent,
+        CardComponent,
+        PDialogStubComponent,
+        RouterLinkStubDirective
       ]
     })
     .compileComponents();

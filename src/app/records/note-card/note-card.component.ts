@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./note-card.component.scss']
 })
 export class NoteCardComponent implements OnInit {
-  @Input() note: any;
+  @Input() note: any = {};
   showCheck: boolean;
   @Output() checked: EventEmitter<string>;
 
@@ -18,11 +18,11 @@ export class NoteCardComponent implements OnInit {
     this.showCheck = false;
   }
 
-  toggleCheck() {
+  toggleCheck(): void {
     this.showCheck = !this.showCheck;
   }
 
-  onChecked() {
+  onChecked(): void {
     this.checked.next(this.note);
   }
 }

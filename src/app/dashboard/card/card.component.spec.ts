@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CardComponent } from './card.component';
+import { PDialogStubComponent } from '../../../testing/third-party-stubs';
+import { RouterLinkStubDirective } from '../../../testing/router-stubs';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -11,7 +13,7 @@ describe('CardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardComponent ]
+      declarations: [ CardComponent, PDialogStubComponent, RouterLinkStubDirective ]
     })
     .compileComponents();
   }));

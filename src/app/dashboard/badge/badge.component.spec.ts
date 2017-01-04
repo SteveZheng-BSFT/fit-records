@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { BadgeComponent } from './badge.component';
+import { CardComponent } from '../card/card.component';
+import { RouterLinkStubDirective } from '../../../testing/router-stubs';
+import { PDialogStubComponent } from '../../../testing/third-party-stubs';
 
 describe('BadgeComponent', () => {
   let component: BadgeComponent;
@@ -11,7 +14,12 @@ describe('BadgeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BadgeComponent ]
+      declarations: [
+        BadgeComponent,
+        CardComponent,
+        PDialogStubComponent,
+        RouterLinkStubDirective
+      ]
     })
     .compileComponents();
   }));

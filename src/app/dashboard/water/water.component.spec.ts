@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { WaterComponent } from './water.component';
+import { CardComponent } from '../card/card.component';
+import { PDialogStubComponent } from '../../../testing/third-party-stubs';
+import { RouterLinkStubDirective } from '../../../testing/router-stubs';
 
 describe('WaterComponent', () => {
   let component: WaterComponent;
@@ -11,7 +14,12 @@ describe('WaterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WaterComponent ]
+      declarations: [
+        WaterComponent,
+        CardComponent,
+        PDialogStubComponent,
+        RouterLinkStubDirective
+      ]
     })
     .compileComponents();
   }));

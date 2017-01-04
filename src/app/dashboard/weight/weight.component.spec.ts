@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { WeightComponent } from './weight.component';
+import { CardComponent } from '../card/card.component';
+import { PDialogStubComponent } from '../../../testing/third-party-stubs';
+import { RouterLinkStubDirective } from '../../../testing/router-stubs';
 
 describe('WeightComponent', () => {
   let component: WeightComponent;
@@ -11,7 +14,12 @@ describe('WeightComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WeightComponent ]
+      declarations: [
+        WeightComponent,
+        CardComponent,
+        PDialogStubComponent,
+        RouterLinkStubDirective
+      ]
     })
     .compileComponents();
   }));

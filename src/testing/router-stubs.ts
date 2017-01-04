@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Directive, Input } from '@angular/core';
 
 @Component(
   {
@@ -6,3 +6,18 @@ import { Component } from '@angular/core';
     template: ''
   })
 export class RouterOutletStubComponent { }
+
+@Directive({
+  selector: '[routerLink]',
+  host: {
+    '(click)': 'onClick()'
+  }
+})
+export class RouterLinkStubDirective {
+  @Input('routerLink') linkParams: any;
+  navigatedTo: any = null;
+
+  onClick() {
+    this.navigatedTo = this.linkParams;
+  }
+}
