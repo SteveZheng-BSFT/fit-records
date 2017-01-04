@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -9,6 +9,8 @@ export class CardComponent implements OnInit {
   quickView: boolean;
   flipped: boolean;
   showTools: boolean;
+  @Input() routeTo: string = '';
+
   constructor(public el: ElementRef) { }
 
   ngOnInit() {

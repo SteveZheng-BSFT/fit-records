@@ -13,13 +13,15 @@ import { CalendarModule, DialogModule } from 'primeng/primeng';
 import { FormsModule } from '@angular/forms';
 import { WaterComponent } from './water/water.component';
 import { CardComponent } from './card/card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports: [
       CommonModule,
       FormsModule,
       CalendarModule,
-      DialogModule
+      DialogModule,
+      RouterModule
     ],
     exports: [],
     declarations: [
