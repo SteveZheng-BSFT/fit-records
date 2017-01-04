@@ -11,6 +11,7 @@ export class RecordCreatorComponent implements OnInit {
   form: FormGroup;
   title: AbstractControl;
   content: AbstractControl;
+  disabled: boolean = false;
 
   constructor(fb: FormBuilder, public recordService: RecordService) {
     this.form = fb.group({
@@ -25,9 +26,12 @@ export class RecordCreatorComponent implements OnInit {
   }
 
   onSubmit(form): void {
-    this.recordService.addRecord(form);
-    this.title.setValue('');
-    this.content.setValue('');
+    if (this.title && this.content) {
+      this.recordService.addRecord(form);
+      this.title.setValue('');
+      this.content.setValue('');
+    }
+    this.disabled = true;
   }
 
 }

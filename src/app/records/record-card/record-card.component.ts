@@ -23,6 +23,6 @@ export class RecordCardComponent implements OnInit {
   }
 
   onChecked(): void {
-    this.checked.next(this.note);
+    this.checked.emit(this.note);
   }
 }
