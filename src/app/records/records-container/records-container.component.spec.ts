@@ -4,7 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { RecordsContainerComponent } from './records-container.component';
-import { NoteCardComponent } from '../note-card/note-card.component';
+import { RecordCardComponent } from '../record-card/record-card.component';
+import { RecordCreatorComponent } from '../record-creator/record-creator.component';
 
 describe('RecordsContainerComponent', () => {
   let component: RecordsContainerComponent;
@@ -14,7 +15,8 @@ describe('RecordsContainerComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         RecordsContainerComponent,
-        NoteCardComponent
+        RecordCardComponent,
+        RecordCreatorComponent
       ]
     })
     .compileComponents();

@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecordsContainerComponent } from './records-container/records-container.component';
-import { NoteCardComponent } from './note-card/note-card.component';
+import { RecordCardComponent } from './record-card/record-card.component';
+import { RecordCreatorComponent } from './record-creator/record-creator.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [
     RecordsContainerComponent,
-    NoteCardComponent
+    RecordCardComponent,
+    RecordCreatorComponent
   ]
 })
 export class RecordsModule { }

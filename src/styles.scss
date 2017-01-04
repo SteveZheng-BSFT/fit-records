@@ -5,19 +5,6 @@
   width :20%
 }
 
-// flip card part start---------------
-.front, .back {
-  backface-visibility: hidden;
-}
-
-.back {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: rotateY(180deg);
-}
-// flip card part end------------------------
-
 .main-bgcolor {
   background-color: #2F3F43;
 }
@@ -29,3 +16,38 @@
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
   outline: 0;
 }
+
+// flip card part---------------
+.front, .back {
+  backface-visibility: hidden;
+}
+.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+// ghost input-------------------------------
+.ghost-input {
+  padding-left: 5px;
+  +span {
+    position: absolute;
+    bottom: 7px;
+    left: 5px;
+    color: darkgray;
+    cursor: text;
+    transition: all 0.5s;
+  }
+  &:focus+span {
+    font-size: 0.7rem;
+    bottom: 24px;
+    color: deepskyblue;
+  }
+}
+.stay-top+span {
+  font-size: 0.7rem;
+  bottom: 24px;
+  color: deepskyblue;
+}
+

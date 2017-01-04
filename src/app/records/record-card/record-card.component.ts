@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-note-card',
-  templateUrl: './note-card.component.html',
-  styleUrls: ['./note-card.component.scss']
+  selector: 'app-record-card',
+  templateUrl: './record-card.component.html',
+  styleUrls: ['./record-card.component.scss']
 })
-export class NoteCardComponent implements OnInit {
+export class RecordCardComponent implements OnInit {
   @Input() note: any = {};
   showCheck: boolean;
   @Output() checked: EventEmitter<string>;
