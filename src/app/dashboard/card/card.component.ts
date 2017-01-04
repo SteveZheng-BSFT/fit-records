@@ -6,12 +6,13 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-
+  quickView: boolean;
   flipped: boolean;
   showTools: boolean;
   constructor(public el: ElementRef) { }
 
   ngOnInit() {
+    this.quickView = false;
     this.flipped = false;
     this.showTools = false;
   }
@@ -28,5 +29,9 @@ export class CardComponent implements OnInit {
 
   triggerToolBox(): void {
     this.showTools = !this.showTools;
+  }
+
+  showQuickView(): void {
+    this.quickView = true;
   }
 }

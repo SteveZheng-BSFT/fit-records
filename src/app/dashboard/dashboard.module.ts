@@ -9,7 +9,7 @@ import { StepsComponent } from './steps/steps.component';
 import { FoodComponent } from './food/food.component';
 import { BadgeComponent } from './badge/badge.component';
 import { CaloriesComponent } from './calories/calories.component';
-import { CalendarModule } from 'primeng/components/calendar/calendar';
+import { CalendarModule, DialogModule } from 'primeng/primeng';
 import { FormsModule } from '@angular/forms';
 import { WaterComponent } from './water/water.component';
 import { CardComponent } from './card/card.component';
@@ -17,8 +17,9 @@ import { CardComponent } from './card/card.component';
 @NgModule({
     imports: [
       CommonModule,
+      FormsModule,
       CalendarModule,
-      FormsModule
+      DialogModule
     ],
     exports: [],
     declarations: [

@@ -8,7 +8,7 @@
     <div class="col-md-2 col-sm-2 col-xs-2" (click)="flip()">
       <i class="fa fa-cog" aria-hidden="true"></i>
     </div>
-    <div class="col-md col-sm col-xs pink">
+    <div class="col-md col-sm col-xs pink" (click)="showQuickView()">
       <i class="fa fa-search-plus" aria-hidden="true"></i> Quick View
     </div>
     <div class="col-md-5 col-sm-5 col-xs-5">
@@ -17,4 +17,9 @@
   </div>
 </div>
 
-
+<p-dialog header="Quick View" [(visible)]="quickView" [resizable]="false" [responsive]="true" [modal]="true">
+  <ng-content select="[card-modal]"></ng-content>
+  <footer class="text-center">
+    <button class="btn btn-outline-primary" (click)="quickView=false">Back</button>
+  </footer>
+</p-dialog>
