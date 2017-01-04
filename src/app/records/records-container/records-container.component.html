@@ -1,7 +1,7 @@
 <div class="main-bgcolor">
   <app-record-creator></app-record-creator>
   <div class="row">
-    <div class="col-md-4" *ngFor="let note of notes; let i = index">
+    <div class="col-md-4" *ngFor="let note of recordService.records; let i = index">
       <app-record-card [note]="note" (checked)="onNoteChecked(i)"></app-record-card>
     </div>
   </div>

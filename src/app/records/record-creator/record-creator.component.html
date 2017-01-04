@@ -1,15 +1,15 @@
 <div class="note-creator">
-  <form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
     <label>
-      <input type="text" class="form-control" appGhostInput>
+      <input [formControl]="title" type="text" class="form-control" appGhostInput>
       <span>Title</span>
     </label>
 
     <label>
-      <input type="text" class="form-control" appGhostInput>
+      <input [formControl]="content" type="text" class="form-control" appGhostInput>
       <span>Input contents</span>
     </label>
 
-    <button type="submit" class="btn btn-primary">Done</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

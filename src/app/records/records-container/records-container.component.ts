@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecordService } from '../../shared/services/record/record.service';
 
 @Component({
   selector: 'app-records-container',
@@ -6,18 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./records-container.component.scss']
 })
 export class RecordsContainerComponent implements OnInit {
-  notes: Object[] = [
-    {title: 'g', value: 'ggg', color: 'lightblue'},
-    {title: 'h', value: 'hhh', color: 'pink'},
-    {title: 'k', value: 'kkk', color: 'green'}
-  ];
-
-  constructor() { }
+  constructor(public recordService: RecordService) { }
 
   ngOnInit() {
   }
 
   onNoteChecked(index: number): void {
-    this.notes.splice(index, 1);
+    this.recordService.removeRecord(index);
   }
 }
