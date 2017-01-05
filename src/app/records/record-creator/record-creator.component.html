@@ -10,6 +10,8 @@
       <span>Input contents</span>
     </label>
 
-    <button type="submit" class="btn btn-primary" [disabled]="disabled">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+    <div *ngIf="title.touched && title.hasError('required')">title required</div>
+    <div *ngIf="content.touched && content.hasError('required')">content required</div>
   </form>
 </div>
