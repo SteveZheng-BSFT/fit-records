@@ -1,17 +1,21 @@
 <div class="note-creator">
+  <i *ngIf="extraVisible" (click)="toggleExtra(false)" class="fa fa-chevron-up" aria-hidden="true"></i>
+
   <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
-    <label>
-      <input [formControl]="title" type="text" class="form-control" appGhostInput>
+    <label *ngIf="extraVisible">
+      <input [(ngModel)]="titleModel" [formControl]="title" type="text" class="form-control" appGhostInput>
       <span>Title</span>
     </label>
 
     <label>
-      <input [formControl]="content" type="text" class="form-control" appGhostInput>
+      <input (focus)="toggleExtra(true)" [formControl]="content" type="text" class="form-control" appGhostInput>
       <span>Input contents</span>
     </label>
 
-    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
-    <span *ngIf="title.touched && title.hasError('required')">title required</span>
-    <span *ngIf="content.touched && content.hasError('required')">content required</span>
+    <div>
+      <button *ngIf="extraVisible" type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+      <span *ngIf="title.touched && title.hasError('required')">title required</span>
+      <span *ngIf="content.touched && content.hasError('required')">content required</span>
+    </div>
   </form>
 </div>

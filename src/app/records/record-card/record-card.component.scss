@@ -15,10 +15,13 @@
   font-weight: bold;
 }
 
-.check-icon {
+.fa {
   font-size: 2rem;
   color: white;
+  background-color: #000;
+  border-radius: 50%;
+  line-height: 1rem;
   position: absolute;
   left: -13px;
-  top: -22px;
+  top: -10px;
 }

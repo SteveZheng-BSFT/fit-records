@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer, HostListener, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appGhostInput]'
@@ -15,11 +15,15 @@ export class GhostInputDirective {
     renderer.setElementStyle(el.nativeElement, 'border-radius', '0');
     // add font change style
     renderer.setElementClass(el.nativeElement, 'ghost-input', true);
+    // if it initially has value, should stick on top
+    if (this.el.nativeElement.value) {
+      this.renderer.setElementClass(this.el.nativeElement, 'stay-top', true);
+    }
   }
 
-  @HostListener('blur') @HostListener('ngModelChange') stickTop() {
+  @HostListener('blur') @HostListener('ngModelChange') @HostListener('hide') stickOnTop() {
     // when not focus, if there are text there, then force title stick on top
-    if (this.el.nativeElement.value !== '') {
+    if (this.el.nativeElement.value) {
       this.renderer.setElementClass(this.el.nativeElement, 'stay-top', true);
     } else {
       // when focus, or [when click submit and clean form, should listen ngmodelchange,

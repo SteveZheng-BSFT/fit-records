@@ -2,4 +2,13 @@
   padding: 20px;
   background-color: #fff;
   border-radius: 3px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.fa {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
