@@ -1,4 +1,4 @@
-<div class="note-creator">
+<div class="note-creator" [ngStyle]="{'background-color': color}">
   <i *ngIf="extraVisible" (click)="toggleExtra(false)" class="fa fa-chevron-up" aria-hidden="true"></i>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
@@ -12,8 +12,11 @@
       <span>Input contents</span>
     </label>
 
-    <div>
-      <button *ngIf="extraVisible" type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+    <div *ngIf="extraVisible">
+      <i class="fa fa-eyedropper" aria-hidden="true" (click)="togglePicker()"></i>
+      <app-color-picker tabindex="-1" (blur)="pickerVisible=false" *ngIf="pickerVisible" (picked)="onPicked($event)"></app-color-picker>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
       <span *ngIf="title.touched && title.hasError('required')">title required</span>
       <span *ngIf="content.touched && content.hasError('required')">content required</span>
     </div>

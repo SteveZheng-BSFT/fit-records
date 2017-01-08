@@ -6,6 +6,7 @@ import { RecordCreatorComponent } from './record-creator/record-creator.componen
 import { SharedModule } from '../shared/shared.module';
 import { RecordService } from '../shared/services/record/record.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ColorPickerComponent } from './record-creator/color-picker/color-picker.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     RecordsContainerComponent,
     RecordCardComponent,
-    RecordCreatorComponent
+    RecordCreatorComponent,
+    ColorPickerComponent
   ],
   providers: [RecordService]
 })
