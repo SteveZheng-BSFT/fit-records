@@ -13,7 +13,6 @@ export class RecordCreatorComponent implements OnInit {
   content: AbstractControl;
   color: string = '#fff';
   extraVisible: boolean = false;
-  pickerVisible: boolean = false;
 
   constructor(fb: FormBuilder, public recordService: RecordService) {
     this.form = fb.group({
@@ -37,15 +36,10 @@ export class RecordCreatorComponent implements OnInit {
     }
     this.toggleExtra(false);
     this.color = '#fff';
-    this.pickerVisible = false;
   }
 
   toggleExtra(setting: boolean): void {
     this.extraVisible = setting;
-  }
-
-  togglePicker(): void {
-    this.pickerVisible = !this.pickerVisible;
   }
 
   onPicked(color): void {
