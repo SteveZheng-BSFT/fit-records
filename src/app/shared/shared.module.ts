@@ -10,7 +10,6 @@ import { GhostInputDirective } from './directives/ghost-input/ghost-input.direct
     ],
     declarations: [
       GhostInputDirective
-    ],
-    providers: [],
+    ]
 })
 export class SharedModule { }

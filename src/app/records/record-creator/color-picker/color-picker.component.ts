@@ -10,6 +10,7 @@ export class ColorPickerComponent implements OnInit {
   colors: string[] = ['#fff', 'pink', 'lightyellow', 'green', 'blue', 'red'];
   constructor() {
     this.picked = new EventEmitter(); // todo why should put here
+    // TODO add picked sign to color when seleted
   }
 
   ngOnInit() {

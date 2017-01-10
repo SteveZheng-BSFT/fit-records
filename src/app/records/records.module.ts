@@ -20,7 +20,6 @@ import { ColorPickerComponent } from './record-creator/color-picker/color-picker
     RecordCardComponent,
     RecordCreatorComponent,
     ColorPickerComponent
-  ],
-  providers: [RecordService]
+  ]
 })
 export class RecordsModule { }

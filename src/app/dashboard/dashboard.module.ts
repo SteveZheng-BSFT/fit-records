@@ -35,7 +35,6 @@ import { RouterModule } from '@angular/router';
       CaloriesComponent,
       WaterComponent,
       CardComponent
-    ],
-    providers: [],
+    ]
 })
 export class DashboardModule { }
