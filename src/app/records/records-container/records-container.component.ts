@@ -7,7 +7,7 @@ import { RecordService } from '../../shared/services/record/record.service';
   styleUrls: ['./records-container.component.scss']
 })
 export class RecordsContainerComponent implements OnInit {
-  constructor(public recordService: RecordService) { }
+  constructor(private recordService: RecordService) { }
 
   ngOnInit() {
   }

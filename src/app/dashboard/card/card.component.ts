@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   showTools: boolean;
   @Input() routeTo: string = '';
 
-  constructor(public el: ElementRef) { }
+  constructor(private el: ElementRef) { }
 
   ngOnInit() {
     this.quickView = false;

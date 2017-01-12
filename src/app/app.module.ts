@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { RecordsModule } from './records/records.module';
+import { RecordService } from './shared/services/record/record.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { RecordsModule } from './records/records.module';
     DashboardModule,
     RecordsModule
   ],
-  providers: [],
+  providers: [RecordService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

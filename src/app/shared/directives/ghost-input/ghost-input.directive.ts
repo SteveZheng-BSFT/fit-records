@@ -5,7 +5,7 @@ import { Directive, ElementRef, Renderer, HostListener, OnInit } from '@angular/
 })
 export class GhostInputDirective {
 
-  constructor(public el: ElementRef, public renderer: Renderer) {
+  constructor(private el: ElementRef, private renderer: Renderer) {
     // make parent relative because we want to child absolute
     renderer.setElementStyle(el.nativeElement.parentNode, 'position', 'relative');
     // remove borders

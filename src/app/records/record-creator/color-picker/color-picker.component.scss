@@ -4,6 +4,7 @@
   position: absolute;
   background-color: #fff;
   z-index: 100;
+  font-size: 0; // fix inline-block between-space issue
 }
 
 .circle {
@@ -12,8 +13,12 @@
   height: 20px;
   border-radius: 50%;
   border: solid 1px lightgrey;
-  margin: 5px;
+  margin: 0 0 5px 5px;
   cursor: pointer;
+} // todo fix choosing circle bug
+
+.picked-circle {
+  border-color: aqua;
 }
 
 .fa {
@@ -22,4 +27,12 @@
 
 .picker-container {
   display: inline-block;
+}
+
+.add-top-margin {
+  margin-top: 5px;
+}
+
+.add-right-margin {
+  margin-right: 5px;
 }

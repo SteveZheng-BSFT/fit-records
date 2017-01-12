@@ -14,7 +14,7 @@ export class RecordCreatorComponent implements OnInit {
   color: string = '#fff';
   extraVisible: boolean = false;
 
-  constructor(fb: FormBuilder, public recordService: RecordService) {
+  constructor(fb: FormBuilder, private recordService: RecordService) {
     this.form = fb.group({
       'title': [null, Validators.required],
       'content': [null, Validators.required]
