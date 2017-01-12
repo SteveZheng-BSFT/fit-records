@@ -17,10 +17,6 @@
   cursor: pointer;
 } // todo fix choosing circle bug
 
-.picked-circle {
-  border-color: aqua;
-}
-
 .fa {
   cursor: pointer;
 }
@@ -35,4 +31,12 @@
 
 .add-right-margin {
   margin-right: 5px;
+}
+
+.set-original-border div{
+  border-color: lightgrey;
+}
+
+.picking {
+  border-color: aqua;
 }
