@@ -1,6 +1,6 @@
 <div class="picker-container" tabindex="-1" (blur)="paletteVisible=false">
   <i class="fa fa-eyedropper" aria-hidden="true" (click)="paletteVisible=!paletteVisible"></i>
-  <div class="palette" *ngIf="true">
+  <div class="palette" *ngIf="paletteVisible">
     <ng-container *ngFor="let color of colors; let i = index">
       <div (click)="pick(color, $event)" class="circle" [ngStyle]="{'background-color': color}" [ngClass]="{'add-right-margin': (i+1)%5===0, 'add-top-margin': (i)/5<1}"></div>
       <div *ngIf="(i+1)%5 === 0"></div>

@@ -13,7 +13,7 @@ export class ColorPickerComponent implements OnInit {
   constructor(private renderer: Renderer) {
     this.picked = new EventEmitter();
   }
-
+// upgrade to bootstrap alpha 6, difference init in init/outside
   ngOnInit() {
   }
 

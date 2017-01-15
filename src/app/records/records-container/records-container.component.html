@@ -1,11 +1,11 @@
 <div class="container-fluid">
-  <div class="row flex-items-md-center">
-    <div class="col-md-4">
+  <div class="row justify-content-center">
+    <div class="col-4">
       <app-record-creator></app-record-creator>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4" *ngFor="let note of recordService.records; let i = index">
+    <div class="col-4" *ngFor="let note of recordService.records; let i = index">
       <app-record-card [note]="note" (checked)="onNoteChecked(i)"></app-record-card>
     </div>
   </div>
