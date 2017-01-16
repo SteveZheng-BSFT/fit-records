@@ -1,14 +1,21 @@
-import { Component, OnInit, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, Input, trigger, state, style, transition, animate } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
+  animations: [
+    trigger('toolVisibility', [
+      state('shown', style({opacity: 1})),
+      state('hidden', style({opacity: 0})),
+      transition('* => *', animate('.5s'))
+    ])
+  ]
 })
 export class CardComponent implements OnInit {
   quickView: boolean;
   flipped: boolean;
-  showTools: boolean;
+  showTools: string;
   @Input() routeTo: string = '';
 
   constructor(private el: ElementRef) { }
@@ -16,7 +23,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     this.quickView = false;
     this.flipped = false;
-    this.showTools = false;
+    this.showTools = 'hidden';
   }
 
   // click to flip card, true for front, false for back
@@ -30,7 +37,7 @@ export class CardComponent implements OnInit {
   }
 
   triggerToolBox(): void {
-    this.showTools = !this.showTools;
+    this.showTools = this.showTools == 'shown'? 'hidden': 'shown';
   }
 
   showQuickView(): void {

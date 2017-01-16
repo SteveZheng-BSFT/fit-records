@@ -4,7 +4,7 @@
   </div>
 
   <!--tools under each card-->
-  <div class="row toolbox text-center no-gutters" *ngIf="showTools">
+  <div class="row toolbox text-center no-gutters" [@toolVisibility]="showTools">
     <div class="col col-sm-2" (click)="flip()">
       <i class="fa fa-cog"></i>
     </div>
