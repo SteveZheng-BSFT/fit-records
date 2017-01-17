@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { RecordService } from '../../shared/services/record/record.service';
 
@@ -13,14 +13,16 @@ export class RecordCreatorComponent implements OnInit {
   content: AbstractControl;
   color: string = '#fff';
   extraVisible: boolean = false;
+  @Output() recordCreated: EventEmitter<{}>;
 
-  constructor(fb: FormBuilder, private recordService: RecordService) {
+  constructor(fb: FormBuilder) {
     this.form = fb.group({
       'title': [null, Validators.required],
       'content': [null, Validators.required]
     });
     this.title = this.form.controls['title'];
     this.content = this.form.controls['content'];
+    this.recordCreated = new EventEmitter();
   }
 
   ngOnInit() {
@@ -30,7 +32,8 @@ export class RecordCreatorComponent implements OnInit {
     // from logic add restriction
     if (this.title.value && this.content.value) {
       form.color = this.color;
-      this.recordService.addRecord(form);
+
+      this.recordCreated.emit(form);
       this.title.setValue(null);
       this.content.setValue(null);
     }

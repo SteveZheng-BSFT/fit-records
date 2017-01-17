@@ -1,21 +1,25 @@
 import { Injectable } from '@angular/core';
+import { ApiService } from '../api/api.service';
 
 @Injectable()
 export class RecordService {
 
-  records: Object[] = [
-    {title: 'g', content: 'ggg', color: 'lightblue'},
-    {title: 'h', content: 'hhh', color: 'pink'},
-    {title: 'k', content: 'kkk', color: 'green'}
-  ];
-  constructor() { }
+  path: string = '/records';
 
-  addRecord(record: Object): void {
-    record['color'] = record['color'] || 'lightyellow';
-    this.records.push(record);
+  constructor(private apiService: ApiService) { }
+
+  addRecord(record: Object) {
+    // give a id to each record
+    record['id'] = record['id'] || Math.random();
+
+    return this.apiService.post(this.path, record);
   }
 
-  removeRecord(index: number): void {
-    this.records.splice(index, 1);
+  getRecords(): any {
+    return this.apiService.get(this.path);
+  }
+
+  removeRecord(record) {
+    return this.apiService.del(`${this.path}/${record.id}`);
   }
 }

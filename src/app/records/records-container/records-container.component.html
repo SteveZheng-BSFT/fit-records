@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-10 col-md-4">
-      <app-record-creator></app-record-creator>
+      <app-record-creator (recordCreated)="onRecordCreated($event)"></app-record-creator>
     </div>
   </div>
   <div class="row">
-    <div class="col-4" *ngFor="let note of recordService.records; let i = index">
-      <app-record-card [note]="note" (checked)="onNoteChecked(i)"></app-record-card>
+    <div class="col-4" *ngFor="let note of records">
+      <app-record-card [note]="note" (checked)="onCrossChecked(note)"></app-record-card>
     </div>
   </div>
 </div>
