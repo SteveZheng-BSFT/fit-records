@@ -7,6 +7,10 @@
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
   outline: 0;
 }
+// every elem but font-awesome because it can't encode maven pro
+:not(i) {
+  font-family: 'Maven Pro', sans-serif!important;
+}
 
 // flip card part---------------
 .front, .back {
