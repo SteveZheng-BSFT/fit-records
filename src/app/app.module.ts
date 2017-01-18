@@ -11,6 +11,8 @@ import { RecordsModule } from './records/records.module';
 import { RecordService } from './shared/services/record/record.service';
 import { ApiService } from './shared/services/api/api.service';
 import { MockBackendService } from './shared/services/mock-backend/mock-backend.service';
+import { StoreHelper } from './shared/services/store/store-helper';
+import { Store } from './shared/services/store/store';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { MockBackendService } from './shared/services/mock-backend/mock-backend.
     // make sure import after http module
     InMemoryWebApiModule.forRoot(MockBackendService, {delay: 800})
   ],
-  providers: [RecordService, ApiService],
+  providers: [RecordService, ApiService, Store, StoreHelper],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
