@@ -4,12 +4,12 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
     <label *ngIf="extraVisible">
       <input [(ngModel)]="titleModel" [formControl]="title" type="text" class="form-control" appGhostInput>
-      <span>Title</span>
+      <span><strong>Title</strong></span>
     </label>
 
     <label>
       <input (focus)="toggleExtra(true)" [formControl]="content" type="text" class="form-control" appGhostInput>
-      <span>Input contents</span>
+      <span>Take a note...</span>
     </label>
 
     <div *ngIf="extraVisible">

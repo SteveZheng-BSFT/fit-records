@@ -4,7 +4,6 @@
   margin: auto;
   width :20%
 }
-
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
   outline: 0;
 }
@@ -27,7 +26,7 @@
     position: absolute;
     bottom: 7px;
     left: 5px;
-    color: darkgray;
+    color: #737373;
     cursor: text;
     transition: all 0.5s;
   }

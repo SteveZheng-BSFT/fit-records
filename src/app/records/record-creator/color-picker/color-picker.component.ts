@@ -7,7 +7,8 @@ import { Component, OnInit, Output, EventEmitter, ElementRef, ViewChildren, Rend
 })
 export class ColorPickerComponent implements OnInit {
   @Output() picked: EventEmitter<string>;
-  colors: string[] = ['#fff', 'pink', 'lightyellow', 'green', 'blue', 'red'];
+  colors: string[] = ['#ffffff', '#ffff8d', '#FFd180', '#ffbb00', '#ff8a80',
+                      '#cfd8dc', '#a7ffeb', '#ccff90', '#80d8ff', '#2B9CD8'];
   lastClickedColor: any = this.renderer.createElement(null, 'div');
 
   constructor(private renderer: Renderer) {

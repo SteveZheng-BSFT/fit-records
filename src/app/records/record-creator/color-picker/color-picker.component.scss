@@ -9,13 +9,16 @@
 
 .circle {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: solid 1px lightgrey;
   margin: 0 0 5px 5px;
   cursor: pointer;
-} // todo fix choosing circle bug
+  border: solid 1px #e4e4e4;
+  &:hover {
+    border: solid 2px #858585;
+  }
+}
 
 .fa {
   cursor: pointer;
