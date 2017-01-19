@@ -10,12 +10,16 @@ import { Subscription } from 'rxjs';
 })
 export class RecordsContainerComponent implements OnInit, OnDestroy {
   records: any[];
+  loading: boolean = false;
 
   constructor(private recordService: RecordService, private store: Store) { }
 
   ngOnInit() {
     this.recordService.getRecords().subscribe();
-    this.store.changes.map(data => data.records).subscribe(records => this.records = records);
+    this.store.changes.map(data => data.records).subscribe(records => {
+      this.records = records;
+      this.loading = false;
+    });
   }
 
   ngOnDestroy() {
@@ -23,10 +27,12 @@ export class RecordsContainerComponent implements OnInit, OnDestroy {
   }
 
   onCrossChecked(record): void {
+    this.loading = true;
     this.recordService.removeRecord(record).subscribe();
   }
 
   onRecordCreated(record: any) {
+    this.loading = true;
     // when backend success created record, add here on UI
     this.recordService.addRecord(record).subscribe();
   }

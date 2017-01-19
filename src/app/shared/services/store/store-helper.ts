@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class StoreHelper {
-  constructor(private store: Store) {}
+  constructor(private store: Store) {} // todo a bug can't delete new card first
 
   update(prop, state) { // prop and state are back from backend
     const currentState = this.store.getState();
