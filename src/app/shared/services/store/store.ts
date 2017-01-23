@@ -11,12 +11,18 @@ export interface Record {
   userId: string;
 }
 
+export interface User {
+  id?: string;
+}
+
 export interface State {
   records: Record[];
+  user: User
 }
 
 const defaultState: State = {
-  records: []
+  records: [],
+  user: {}
 };
 
 const _store = new BehaviorSubject<State>(defaultState);

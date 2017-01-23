@@ -13,6 +13,8 @@ import { ApiService } from './shared/services/api/api.service';
 import { MockBackendService } from './shared/services/mock-backend/mock-backend.service';
 import { StoreHelper } from './shared/services/store/store-helper';
 import { Store } from './shared/services/store/store';
+import { HomeModule } from './home/home.module';
+import { AuthService } from './shared/services/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { Store } from './shared/services/store/store';
     RecordsModule,
     HttpModule,
     // make sure import after http module
-    InMemoryWebApiModule.forRoot(MockBackendService, {delay: 800})
+    InMemoryWebApiModule.forRoot(MockBackendService, {delay: 800}),
+    HomeModule
   ],
-  providers: [RecordService, ApiService, Store, StoreHelper],
+  providers: [RecordService, ApiService, Store, StoreHelper, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
