@@ -10,8 +10,8 @@ import { AuthComponent } from './home/auth/auth.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'dashboard', component: DashboardContainerComponent, canActivate: [AuthService] },
-  { path: 'records', component: RecordsContainerComponent, canActivate: [AuthService] },
+  { path: 'dashboard', component: DashboardContainerComponent, /*canActivate: [AuthService]*/ },
+  { path: 'records', component: RecordsContainerComponent, /*canActivate: [AuthService]*/ },
   { path: 'auth', component: AuthComponent},
   { path: '404', component: NotFoundComponent},
   { path: '**', redirectTo: '404'}

@@ -28,7 +28,7 @@ import { AuthService } from './shared/services/auth/auth.service';
     RecordsModule,
     HttpModule,
     // make sure import after http module
-    InMemoryWebApiModule.forRoot(MockBackendService, {delay: 800}),
+    // InMemoryWebApiModule.forRoot(MockBackendService, {delay: 800}),
     HomeModule
   ],
   providers: [RecordService, ApiService, Store, StoreHelper, AuthService],

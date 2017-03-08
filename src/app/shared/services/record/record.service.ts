@@ -14,12 +14,12 @@ export class RecordService {
     record['id'] = record['id'] || Math.random();
 
     return this.apiService.post(this.path, record)
-      .do(res => this.storeHelper.add('records', res.data)); // do: get notified but don't affect them
+      .do(res => this.storeHelper.add('records', res)); // do: get notified but don't affect them
   }
 
   getRecords(): any {
     return this.apiService.get(this.path)
-      .do(res => this.storeHelper.update('records', res.data));
+      .do(res => this.storeHelper.update('records', res));
   }
 
   removeRecord(record) {

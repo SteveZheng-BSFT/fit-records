@@ -10,41 +10,41 @@ export class ApiService {
   });
   options = new RequestOptions({headers: this.headers});
 
-  api_url: string = 'api';
+  api_url: string = 'http://localhost:3000/api';
 
   constructor(private http: Http) { }
 
   get(path: string): Observable<any> {
     // check errors first and then get json format
     return this.http.get(`${this.api_url}${path}`, this.options)
-      .map(this.checkErrors)
+      .map(ApiService.checkErrors)
       .catch(err => Observable.throw(err))
-      .map(this.getJson);
+      .map(ApiService.getJson);
   }
 
   post(path: string, body): Observable<any> {
     return this.http.post(`${this.api_url}${path}`, JSON.stringify(body), this.options)
-      .map(this.checkErrors)
+      .map(ApiService.checkErrors)
       .catch(err => Observable.throw(err))
-      .map(this.getJson);
+      .map(ApiService.getJson);
   }
 
   del(path: string): Observable<any> {
     return this.http.delete(`${this.api_url}${path}`, this.options)
-      .map(this.checkErrors)
+      .map(ApiService.checkErrors)
       .catch(err => Observable.throw(err))
-      .map(this.getJson);
+      .map(ApiService.getJson);
   }
 
   setHeaders(headers) {
     Object.keys(headers).forEach(header => this.headers.set(header, headers[header]));
   }
 
-  private getJson(res: Response) {
-    return res.json();
+  private static getJson(res: Response) {
+    return res['_body'];
   }
 
-  private checkErrors(res: Response): Response {
+  private static checkErrors(res: Response): Response {
     if (res.status >= 200 && res.status < 300) {
       return res;
     } else {

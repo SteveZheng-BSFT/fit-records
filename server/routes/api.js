@@ -6,8 +6,13 @@ const axios = require('axios');
 const API = 'https://jsonplaceholder.typicode.com';
 
 /* GET api listing. */
-router.get('/', (req, res) => {
-  res.send('api works');
+router.get('/records', (req, res) => {
+  let records = [
+    {id: '1111', title: 'g', content: 'ggg', color: 'lightblue'},
+    {id: '1323', title: 'h', content: 'hhh', color: 'pink'},
+    {id: '1666', title: 'k', content: 'kkk', color: 'green'}
+  ];
+  res.json(records);
 });
 
 // Get all posts

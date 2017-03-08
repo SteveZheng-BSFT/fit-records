@@ -5,6 +5,7 @@ import { GhostInputDirective } from './directives/ghost-input/ghost-input.direct
 import { LoaderComponent } from './cmps/loader/loader.component';
 import { NotFoundComponent } from './cmps/not-found/not-found.component';
 import { PhonePipe } from './pipes/phone/phone.pipe';
+import { CheckboxDirective } from './directives/checkbox/checkbox.directive';
 
 @NgModule({
     imports: [CommonModule],
@@ -12,13 +13,15 @@ import { PhonePipe } from './pipes/phone/phone.pipe';
       GhostInputDirective,
       LoaderComponent,
       NotFoundComponent,
-      PhonePipe
+      PhonePipe,
+      CheckboxDirective
     ],
     declarations: [
       GhostInputDirective,
       LoaderComponent,
       NotFoundComponent,
-      PhonePipe
+      PhonePipe,
+      CheckboxDirective
     ]
 })
 export class SharedModule { }
