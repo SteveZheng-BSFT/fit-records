@@ -41,7 +41,7 @@ export class ApiService {
   }
 
   private static getJson(res: Response) {
-    return res['_body'];
+    return res.json(); // get json data from _body and then parse it to object
   }
 
   private static checkErrors(res: Response): Response {

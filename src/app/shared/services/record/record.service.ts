@@ -19,7 +19,9 @@ export class RecordService {
 
   getRecords(): any {
     return this.apiService.get(this.path)
-      .do(res => this.storeHelper.update('records', res));
+      .do(res => {
+        this.storeHelper.update('records', res);
+      });
   }
 
   removeRecord(record) {
