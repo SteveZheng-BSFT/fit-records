@@ -15,6 +15,7 @@ import { StoreHelper } from './shared/services/store/store-helper';
 import { Store } from './shared/services/store/store';
 import { HomeModule } from './home/home.module';
 import { AuthService } from './shared/services/auth/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthService } from './shared/services/auth/auth.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     DashboardModule,
     RecordsModule,
     HttpModule,
