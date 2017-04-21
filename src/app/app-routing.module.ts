@@ -9,12 +9,12 @@ import { AuthService } from './shared/services/auth/auth.service';
 import { AuthComponent } from './home/auth/auth.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: 'dashboard', component: DashboardContainerComponent, /*canActivate: [AuthService]*/ },
   { path: 'records', component: RecordsContainerComponent, /*canActivate: [AuthService]*/ },
   { path: 'auth', component: AuthComponent},
   { path: '404', component: NotFoundComponent},
-  { path: '**', redirectTo: '404'}
+  // { path: '**', redirectTo: '404'}
 ];
 
 @NgModule({

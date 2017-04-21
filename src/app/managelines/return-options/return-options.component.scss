@@ -1,0 +1,20 @@
+//@import "standards";
+
+.outer-box {
+  padding: 24px 20px;
+
+  h1 {
+    //font-family: $xfinity-extra-light;
+    text-align: left;
+  }
+
+  .btns {
+    position: absolute;
+    bottom: 32px;
+    right: 20px;
+
+    my-btn {
+      margin-left: 32px;
+    }
+  }
+}

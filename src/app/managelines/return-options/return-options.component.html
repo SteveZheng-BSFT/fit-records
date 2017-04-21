@@ -1,0 +1,12 @@
+<div class="outer-box">
+    <h1>Return/Exchange: {{returnStep}}</h1>
+
+    <router-outlet></router-outlet>
+
+    <div class="row btns">
+        <div class="col-xs">
+            <!--<my-btn [class]="'a-style'" [type]="'cancel'">Cancel</my-btn>-->
+            <button [disabled]="currentBtnStatus.disabled" (click)="goNext()">Next</button>
+        </div>
+    </div>
+</div>

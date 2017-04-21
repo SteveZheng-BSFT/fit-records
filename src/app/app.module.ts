@@ -16,12 +16,14 @@ import { Store } from './shared/services/store/store';
 import { HomeModule } from './home/home.module';
 import { AuthService } from './shared/services/auth/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ManageLinesModule } from './managelines/managelines.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    ManageLinesModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

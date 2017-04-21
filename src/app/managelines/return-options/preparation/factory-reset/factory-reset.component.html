@@ -1,0 +1,23 @@
+<my-split-card>
+    <card-title>
+        4. Factory Reset
+    </card-title>
+
+    <card-content>
+        <div class="row">
+            <div class="col-xs-7">
+                <label myCheckbox position="left" *ngIf="turnedOff">
+                    <input type="checkbox" (change)="confirmReset($event)" [(ngModel)]="factoryResetConfirmed"> The device has been restored to factory settings.
+                </label>
+                <div *ngIf="!turnedOff">errs</div>
+            </div>
+            <div class="col-xs-5 text-right" *ngIf="isIphone">
+                <div *ngIf="turnedOff">
+                    <img src="icons/ic-global-success-green-24.svg" class="success-msg-img"> Find my iPhone is turned off.
+                </div>
+                <my-btn *ngIf="!turnedOff" (click)="turnOffIphone()">Retry</my-btn>
+            </div>
+        </div>
+
+    </card-content>
+</my-split-card>

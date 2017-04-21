@@ -1,0 +1,39 @@
+//@import "standards";
+
+.outer-box {
+  //background: $white;
+  text-align: left;
+  margin-top: 32px;
+  padding: 24px 20px; // confirmed with Gina, we should have consistent padding
+  font-size: 20px;
+
+  .title-section {
+    margin: 0 0 16px 0;
+
+    .col-xs {
+      padding: 0;
+    }
+
+    .card-title {
+      //font-family: $xfinity-medium;
+      font-size: 22px;
+      //color: $black;
+      line-height: 32px;
+      display: inline-block;
+    }
+
+    .card-subtitle {
+      //font-family: $xfinity-light;
+      //color: $cool-grey13;
+      display: inline-block;
+    }
+
+  }
+
+  .card-content {
+    //border-top: 1px solid $cool-grey6;
+    padding-top: 24px;
+    //font-family: $xfinity-regular;
+    //color: $cool-grey11;
+  }
+}
